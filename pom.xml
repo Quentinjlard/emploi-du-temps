@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example</groupId>
+  <groupId>org.emploidutemps</groupId>
   <artifactId>emploi-du-temps</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>emploi-du-temps</name>
+  <name>calendrier</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -124,7 +124,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>org.example.emploidutemps/org.example.emploidutemps.HelloApplication</mainClass>
+              <mainClass>org.emploidutemps/org.emploidutemps.calendrier.connexion.ConnexionApplication</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>
