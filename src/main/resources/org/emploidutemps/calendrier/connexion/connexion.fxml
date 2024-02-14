@@ -3,13 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.emploidutemps.calendrier.connexion.ConnexionController">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emploidutemps.calendrier.connexion.ConnexionController">
    <children>
       <Button layoutX="216.0" layoutY="304.0" mnemonicParsing="false" onAction="#onConnexionButtonClick" text="Connexion" />
       <Label layoutX="176.0" layoutY="97.0" text="Esapce des emploi du temps" />
-      <TextField layoutX="176.0" layoutY="184.0" />
-      <TextField layoutX="176.0" layoutY="250.0" />
+      <TextField fx:id="TextFiledLogin" layoutX="176.0" layoutY="184.0" />
+      <TextField fx:id="TextFiledPassword" layoutX="176.0" layoutY="250.0" />
       <Label layoutX="223.0" layoutY="157.0" text="Identifiant" />
       <Label layoutX="216.0" layoutY="226.0" text="Mot de passe" />
       <Label fx:id="connexionText" layoutX="236.0" layoutY="355.0" />
