@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emploidutemps.calendrier.connexion.ConnexionController">
-   <children>
-      <Button layoutX="216.0" layoutY="304.0" mnemonicParsing="false" onAction="#onConnexionButtonClick" text="Connexion" />
-      <Label layoutX="176.0" layoutY="97.0" text="Esapce des emploi du temps" />
-      <TextField fx:id="TextFiledLogin" layoutX="176.0" layoutY="184.0" />
-      <TextField fx:id="TextFiledPassword" layoutX="176.0" layoutY="250.0" />
-      <Label layoutX="223.0" layoutY="157.0" text="Identifiant" />
-      <Label layoutX="216.0" layoutY="226.0" text="Mot de passe" />
-      <Label fx:id="connexionText" layoutX="236.0" layoutY="355.0" />
-   </children>
-</AnchorPane>
+<Pane id="Group1" layoutX="0" layoutY="0" prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emploidutemps.calendrier.connexion.ConnexionController">
+   <Rectangle id="Fond" fill="#A9A9A9" height="500" layoutX="0" layoutY="0" width="500" />
+   <Rectangle id="PetitCarre" fill="#FF8D4E" height="425" layoutX="0" layoutY="0" width="412" />
+   <Rectangle id="GrandCarre" fill="#D9D9D9" height="477.0" layoutX="0" layoutY="0" width="471.0" />
+   <ImageView id="ImageUniversite" fitHeight="98" fitWidth="79" layoutX="196.0" layoutY="31.0">
+      <image>
+         <Image url="@../../../../images/Université_d'Avignon.png" />
+      </image>
+   </ImageView>
+   <Label id="Connexion" layoutX="136.0" layoutY="129.0" prefHeight="60" prefWidth="200" style="-fx-font-family: 'Inter'; -fx-font-size: 36; -fx-font-weight: BOLD; -fx-text-alignment: center;" text="Connexion" textFill="#FF8D4E" />
+   <Rectangle id="Rectangle5" fill="#A9A9A9" height="40" layoutX="79.0" layoutY="230.0" width="340" />
+   <Rectangle id="TexteMdp" fill="#A9A9A9" height="40" layoutX="80.0" layoutY="340.0" width="340" />
+   <Button id="BoutonConnexion" layoutX="294.0" layoutY="412.0" prefHeight="39" prefWidth="128" style="-fx-background-color: #FF8D4E;" />
+   <Button id="BoutonRetour" layoutX="86.0" layoutY="412.0" prefHeight="39" prefWidth="128" style="-fx-background-color: #FF8D4E;" />
+   <Label id="Retour" layoutX="96.0" layoutY="419.0" prefHeight="23" prefWidth="109" style="-fx-font-family: 'Inter'; -fx-font-size: 16; -fx-font-weight: BOLD; -fx-text-alignment: center;" text="Retour" textFill="BLACK" />
+   <Rectangle id="key-solid1" fill="#FF8D4E" height="25" layoutX="84.0" layoutY="200.0" width="25" />
+   <Rectangle id="user-solid1" fill="#FF8D4E" height="28.57" layoutX="84.0" layoutY="302.0" width="25" />
+   <Label id="MotDePasse" layoutX="93.0" layoutY="308.0" prefHeight="10" prefWidth="86" style="-fx-font-family: 'Inter'; -fx-font-size: 11; -fx-text-alignment: center;" text="Mot de passe" textFill="WHITE" />
+   <Label id="Utilisateur" layoutX="93.0" layoutY="205.0" prefHeight="10" prefWidth="86" style="-fx-font-family: 'Inter'; -fx-font-size: 11; -fx-text-alignment: center;" text="Utilisateur" textFill="WHITE" />
+   <TextField fx:id="TextFiledLogin" layoutX="84.0" layoutY="238.0" prefHeight="25.0" prefWidth="323.0" promptText="Utilisateur" />
+   <TextField fx:id="TextFiledPassword" layoutX="89.0" layoutY="348.0" prefHeight="25.0" prefWidth="323.0" promptText="Mot de passe" />
+   <Button layoutX="300.0" layoutY="419.0" mnemonicParsing="false" onAction="#onConnexionButtonClick" prefHeight="25.0" prefWidth="118.0" text="Se connecter" />
+   <Label fx:id="connexionText" layoutX="133.0" layoutY="181.0" prefHeight="17.0" prefWidth="192.0" />
+</Pane>

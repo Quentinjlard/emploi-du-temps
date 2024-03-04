@@ -3,6 +3,7 @@ package org.emploidutemps.calendrier.connexion;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.emploidutemps.calendrier.api.AuthentificationManager;
 
 public class ConnexionController {
 
@@ -16,9 +17,16 @@ public class ConnexionController {
     @FXML
     protected void onConnexionButtonClick() {
 
-        String id = TextFiledLogin.getText();
-        String pswd = TextFiledPassword.getText();
-        connexionText.setText(id + " " + pswd);
+        boolean authentification = AuthentificationManager.authentifierUtilisateur(TextFiledLogin.getText(),
+                                                                                    TextFiledPassword.getText());
+
+        if ( authentification ) {
+            connexionText.setText("Authentification réussie.");
+            System.out.println("Authentification réussie.");
+        } else {
+            connexionText.setText("Nom d'utilisateur ou mot de passe incorrect.");
+            System.out.println("Nom d'utilisateur ou mot de passe incorrect.");
+        }
     }
 
 }

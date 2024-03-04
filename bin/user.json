@@ -1,0 +1,38 @@
+[
+  {
+    "ID": 1,
+    "Nom": "Dupont",
+    "Prénom": "Jean",
+    "Color": true,
+    "Statut": "professeur",
+    "NomUtilisateur": "jean.dupont",
+    "MotDePasse": "motdepasse1"
+  },
+  {
+    "ID": 2,
+    "Nom": "Martin",
+    "Prénom": "Sophie",
+    "Color": false,
+    "Statut": "étudiant",
+    "NomUtilisateur": "sophie.martin",
+    "MotDePasse": "motdepasse2"
+  },
+  {
+    "ID": 3,
+    "Nom": "Lefevre",
+    "Prénom": "Pierre",
+    "Color": true,
+    "Statut": "étudiant",
+    "NomUtilisateur": "pierre.lefevre",
+    "MotDePasse": "motdepasse3"
+  },
+  {
+    "ID": 4,
+    "Nom": "Dubois",
+    "Prénom": "Marie",
+    "Color": false,
+    "Statut": "professeur",
+    "NomUtilisateur": "marie.dubois",
+    "MotDePasse": "motdepasse4"
+  }
+]
