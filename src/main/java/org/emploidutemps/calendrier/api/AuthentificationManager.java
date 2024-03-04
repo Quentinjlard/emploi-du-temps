@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class AuthentificationManager {
 
-    private static final String JDBC_URL = "jdbc:sqlite:C:/Users/quent/OneDrive/Bureau/Documents/Master_IA/Semestre_2/Interface/emploi-du-temps/BD";
+    private static final String JDBC_URL = "jdbc:sqlite:C:\\Users\\quent\\OneDrive\\Bureau\\Documents\\Master_IA\\Semestre_2\\Interface\\emploi-du-temps\\BD";
 
     public static void main(String[] args) {
         String nomUtilisateurSaisi = "jean.dupont";
