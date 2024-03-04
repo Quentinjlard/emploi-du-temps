@@ -10,7 +10,10 @@ module org.example.emploidutemps {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
-    opens org.example.emploidutemps to javafx.fxml;
-    exports org.example.emploidutemps;
+    opens org.emploidutemps.calendrier.connexion to javafx.fxml;
+    exports org.emploidutemps.calendrier.connexion;
+
+
 }
