@@ -12,8 +12,8 @@ module org.example.emploidutemps {
     requires com.almasb.fxgl.all;
     requires java.sql;
 
-    opens org.emploidutemps.calendrier.connexion to javafx.fxml;
-    exports org.emploidutemps.calendrier.connexion;
+    opens org.emploidutemps.calendrier to javafx.fxml;
+    exports org.emploidutemps.calendrier;
 
 
 }

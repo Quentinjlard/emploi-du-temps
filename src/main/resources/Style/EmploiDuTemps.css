@@ -1,0 +1,52 @@
+/* EmploiDuTemps.css */
+
+.root {
+    -fx-background-color: #f4f4f4; /* Couleur de fond */
+}
+
+.top-bar, .center-bar {
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-background-color: #3498db; /* Bleu pastel */
+    -fx-alignment: center;
+}
+
+.menu-button {
+    -fx-font-size: 14;
+    -fx-text-fill: #ffffff;
+}
+
+.nav-button {
+    -fx-font-size: 16;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #e67e22; /* Orange pastel */
+    -fx-border: none;
+    -fx-cursor: hand;
+}
+
+.important-label {
+    -fx-font-size: 18;
+    -fx-text-fill: #333333;
+}
+
+.mode-combo {
+    -fx-font-size: 14;
+}
+
+.content-container {
+    -fx-spacing: 20;
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+.day-week-month-content {
+    -fx-background-color: #ffffff;
+    -fx-border: 1px solid #dddddd;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+.content-label {
+    -fx-font-size: 18;
+    -fx-text-fill: #333333;
+}
