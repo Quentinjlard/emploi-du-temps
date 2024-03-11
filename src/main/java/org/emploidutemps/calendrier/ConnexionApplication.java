@@ -1,4 +1,4 @@
-package org.emploidutemps.calendrier.connexion;
+package org.emploidutemps.calendrier;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

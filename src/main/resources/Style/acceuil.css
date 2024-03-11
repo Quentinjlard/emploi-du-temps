@@ -1,0 +1,31 @@
+/* styles.css */
+
+.root {
+    -fx-background-color: #f8f8f8;
+    -fx-spacing: 20;
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+.welcome-label {
+    -fx-font-size: 24;
+    -fx-text-fill: #333333;
+}
+
+.subtitle {
+    -fx-font-size: 18;
+    -fx-text-fill: #555555;
+}
+
+.info-btn {
+    -fx-font-size: 14;
+    -fx-padding: 10;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #3498db; /* couleur du bouton */
+    -fx-border-radius: 5;
+    -fx-transition-duration: 0.3s;
+}
+
+.info-btn:hover {
+    -fx-background-color: #e67e22; /* couleur au survol */
+}

@@ -1,0 +1,92 @@
+/* BoutonConnexion */
+.BoutonConnexion {
+    -fx-position: absolute;
+    -fx-min-width: 128px;
+    -fx-min-height: 39px;
+    -fx-max-width: 128px;
+    -fx-max-height: 39px;
+    -fx-background-color: #FF8D4E;
+}
+
+/* BoutonRetour */
+.BoutonRetour {
+    -fx-position: absolute;
+    -fx-min-width: 128px;
+    -fx-min-height: 39px;
+    -fx-max-width: 128px;
+    -fx-max-height: 39px;
+    -fx-background-color: #FF8D4E;
+}
+
+/* Fond */
+.Fond {
+    -fx-position: absolute;
+    -fx-min-width: 500px;
+    -fx-min-height: 500px;
+    -fx-max-width: 500px;
+    -fx-max-height: 500px;
+    -fx-background-color: #A9A9A9;
+}
+
+/* PetitCarre */
+.PetitCarre {
+    -fx-position: absolute;
+    -fx-min-width: 412px;
+    -fx-min-height: 425px;
+    -fx-max-width: 412px;
+    -fx-max-height: 425px;
+    -fx-background-color: #FF8D4E;
+}
+
+/* GrandCarre */
+.GrandCarre {
+    -fx-position: absolute;
+    -fx-min-width: 412px;
+    -fx-min-height: 425px;
+    -fx-max-width: 412px;
+    -fx-max-height: 425px;
+    -fx-background-color: #D9D9D9;
+}
+
+/* Connexion */
+.Connexion {
+    -fx-position: absolute;
+    -fx-min-width: 200px;
+    -fx-min-height: 60px;
+    -fx-max-width: 200px;
+    -fx-max-height: 60px;
+    -fx-font-family: 'Inter';
+    -fx-font-style: normal;
+    -fx-font-weight: 900;
+    -fx-font-size: 36px;
+    -fx-text-fill: #FF8D4E;
+}
+
+/* Rectangle 5 */
+.Rectangle5 {
+    -fx-position: absolute;
+    -fx-min-width: 340px;
+    -fx-min-height: 40px;
+    -fx-max-width: 340px;
+    -fx-max-height: 40px;
+    -fx-background-color: #A9A9A9;
+}
+
+/* TexteMdp */
+.TexteMdp {
+    -fx-position: absolute;
+    -fx-min-width: 340px;
+    -fx-min-height: 40px;
+    -fx-max-width: 340px;
+    -fx-max-height: 40px;
+    -fx-background-color: #A9A9A9;
+}
+
+/* key-solid 1 */
+.key-solid1 {
+    -fx-position: absolute;
+    -fx-min-width: 25px;
+    -fx-min-height: 25px;
+    -fx-max-width: 25px;
+    -fx-max-height: 25px;
+}

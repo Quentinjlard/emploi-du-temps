@@ -1,9 +1,16 @@
-package org.emploidutemps.calendrier.connexion;
+package org.emploidutemps.calendrier;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.emploidutemps.calendrier.api.AuthentificationManager;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class ConnexionController {
 
@@ -15,7 +22,7 @@ public class ConnexionController {
     private TextField TextFiledPassword;
 
     @FXML
-    protected void onConnexionButtonClick() {
+    protected void onConnexionButtonClick(ActionEvent event) throws IOException {
 
         boolean authentification = AuthentificationManager.authentifierUtilisateur(TextFiledLogin.getText(),
                                                                                     TextFiledPassword.getText());
@@ -23,6 +30,16 @@ public class ConnexionController {
         if ( authentification ) {
             connexionText.setText("Authentification réussie.");
             System.out.println("Authentification réussie.");
+
+            Parent root = FXMLLoader.load(getClass().getResource("acceuil.fxml"));
+
+            Scene scene = new Scene(root, 400, 600);
+
+            Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            stage.setTitle("Acceuil");
+            stage.setScene(scene);
+            stage.show();
+
         } else {
             connexionText.setText("Nom d'utilisateur ou mot de passe incorrect.");
             System.out.println("Nom d'utilisateur ou mot de passe incorrect.");
