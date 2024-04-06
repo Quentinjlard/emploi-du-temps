@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -28,18 +30,23 @@ public class AccueilController {
     }
 
     public void JourEDT(ActionEvent event) throws IOException {
-
         String FXML = "EDT-Jour.fxml";
         Parent root = FXMLLoader.load(getClass().getResource(FXML));
 
         Scene scene = new Scene(root, 500, 500);
 
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        MenuItem menuItem = (MenuItem) event.getSource();
+        ContextMenu menu = menuItem.getParentPopup();
+        Node node = menu.getOwnerNode();
+        Stage stage = (Stage) node.getScene().getWindow();
+
         stage.setTitle(FXML);
         stage.setScene(scene);
         stage.show();
-
     }
+
+
+
 
     public void SeamineEDT(ActionEvent event) throws IOException {
 
@@ -48,7 +55,11 @@ public class AccueilController {
 
         Scene scene = new Scene(root, 500, 500);
 
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        MenuItem menuItem = (MenuItem) event.getSource();
+        ContextMenu menu = menuItem.getParentPopup();
+        Node node = menu.getOwnerNode();
+        Stage stage = (Stage) node.getScene().getWindow();
+
         stage.setTitle(FXML);
         stage.setScene(scene);
         stage.show();
@@ -62,7 +73,11 @@ public class AccueilController {
 
         Scene scene = new Scene(root, 500, 500);
 
-        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        MenuItem menuItem = (MenuItem) event.getSource();
+        ContextMenu menu = menuItem.getParentPopup();
+        Node node = menu.getOwnerNode();
+        Stage stage = (Stage) node.getScene().getWindow();
+
         stage.setTitle(FXML);
         stage.setScene(scene);
         stage.show();

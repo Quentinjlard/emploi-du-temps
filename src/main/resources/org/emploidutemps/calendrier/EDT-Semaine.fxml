@@ -5,6 +5,8 @@
 
 <BorderPane prefHeight="642.0" prefWidth="744.0" style="-fx-background-color: #f2fafc;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emploidutemps.calendrier.CalendrierSemaineController">
 <top>
+
+
     <HBox alignment="CENTER">
         <Button text="&lt;" />
         <Label text="########" />
@@ -61,9 +63,38 @@
         <!-- Lundi -->
         <!-- Ajoutez ici les cellules pour les événements du lundi -->
 
-        <Pane prefHeight="5.0" prefWidth="5.0" GridPane.columnIndex="1" GridPane.rowIndex="9" style="-fx-background-color:red;" />
-        <Pane prefHeight="5.0" prefWidth="5.0" GridPane.columnIndex="1" GridPane.rowIndex="10" style="-fx-background-color:red;"/>
-        <Pane prefHeight="5.0" prefWidth="5.0" GridPane.columnIndex="1" GridPane.rowIndex="11" style="-fx-background-color:red;"/>
+        <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
 
         <!-- Mardi -->
         <!-- Ajoutez ici les cellules pour les événements du mardi -->
