@@ -2,112 +2,103 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="642.0" prefWidth="744.0" style="-fx-background-color: #f2fafc;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emploidutemps.calendrier.CalendrierSemaineController">
-<top>
-
-
-    <HBox alignment="CENTER">
-        <Button text="&lt;" />
-        <Label text="########" />
-        <Button text="&gt;" />
-    </HBox>
-</top>
-<center>
-
-    <GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
-
-        <columnConstraints>
-            <ColumnConstraints hgrow="ALWAYS" />
-            <ColumnConstraints hgrow="ALWAYS" />
-            <ColumnConstraints hgrow="ALWAYS" />
-            <ColumnConstraints hgrow="ALWAYS" />
-            <ColumnConstraints hgrow="ALWAYS" />
-            <ColumnConstraints hgrow="ALWAYS" />
-        </columnConstraints>
-
-        <!-- Ligne des jours de la semaine -->
-        <Label text="Horaires" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <Label text="Lundi" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-        <Label text="Mardi" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-        <Label text="Mercredi" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-        <Label text="Jeudi" GridPane.columnIndex="4" GridPane.rowIndex="0" />
-        <Label text="Vendredi" GridPane.columnIndex="5" GridPane.rowIndex="0" />
-
-        <!-- Horaires -->
-        <Label text="8:00" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <Label text="8:30" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-        <Label text="9:00" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-        <Label text="9:30" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-        <Label text="10:00" GridPane.columnIndex="0" GridPane.rowIndex="7" />
-        <Label text="10:30" GridPane.columnIndex="0" GridPane.rowIndex="8" />
-        <Label text="11:00" GridPane.columnIndex="0" GridPane.rowIndex="9" />
-        <Label text="11:30" GridPane.columnIndex="0" GridPane.rowIndex="10" />
-        <Label text="12:00" GridPane.columnIndex="0" GridPane.rowIndex="11" />
-        <Label text="12:30" GridPane.columnIndex="0" GridPane.rowIndex="12" />
-        <Label text="13:00" GridPane.columnIndex="0" GridPane.rowIndex="13" />
-        <Label text="13:30" GridPane.columnIndex="0" GridPane.rowIndex="14" />
-        <Label text="14:00" GridPane.columnIndex="0" GridPane.rowIndex="15" />
-        <Label text="14:30" GridPane.columnIndex="0" GridPane.rowIndex="16" />
-        <Label text="15:00" GridPane.columnIndex="0" GridPane.rowIndex="17" />
-        <Label text="15:30" GridPane.columnIndex="0" GridPane.rowIndex="18" />
-        <Label text="16:00" GridPane.columnIndex="0" GridPane.rowIndex="19" />
-        <Label text="16:30" GridPane.columnIndex="0" GridPane.rowIndex="20" />
-        <Label text="17:00" GridPane.columnIndex="0" GridPane.rowIndex="21" />
-        <Label text="17:30" GridPane.columnIndex="0" GridPane.rowIndex="22" />
-        <Label text="18:00" GridPane.columnIndex="0" GridPane.rowIndex="23" />
-        <Label text="18:30" GridPane.columnIndex="0" GridPane.rowIndex="24" />
-        <Label text="19:00" GridPane.columnIndex="0" GridPane.rowIndex="25" />
-        <Label text="19:30" GridPane.columnIndex="0" GridPane.rowIndex="26" />
-
-        <!-- Lundi -->
-        <!-- Ajoutez ici les cellules pour les événements du lundi -->
-
-        <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-        <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-        <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-         <rowConstraints>
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-         </rowConstraints>
-
-        <!-- Mardi -->
-        <!-- Ajoutez ici les cellules pour les événements du mardi -->
-
-        <!-- Mercredi -->
-        <!-- Ajoutez ici les cellules pour les événements du mercredi -->
-
-        <!-- Jeudi -->
-        <!-- Ajoutez ici les cellules pour les événements du jeudi -->
-
-        <!-- Vendredi -->
-        <!-- Ajoutez ici les cellules pour les événements du vendredi -->
-    </GridPane>
-
-</center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  stylesheets="@../../../Style/acceuil.css"
+            xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.emploidutemps.calendrier.CalendrierSemaineController" style="-fx-background-color: #f2fafc;">
+    <top>
+        <MenuBar styleClass="menu-item" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Mon EDT">
+                    <items>
+                        <MenuItem onAction="#JourEDT" mnemonicParsing="false" text="Jour" />
+                        <MenuItem onAction="#SeamineEDT" mnemonicParsing="false" text="Semaine" />
+                        <MenuItem onAction="#MoisEDT" mnemonicParsing="false" text="Mois" />
+                    </items>
+                </Menu>
+                <Menu onAction="#FormationEDT" mnemonicParsing="false" text="Formation" />
+                <Menu onAction="#EnseignementEDT" mnemonicParsing="false" text="Enseignement" />
+                <Menu onAction="#SalleEDT" mnemonicParsing="false" text="Salle" />
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <!-- Ligne des jours de la semaine -->
+            <Label text="Horaires" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="Lundi" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Mardi" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label text="Mercredi" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <Label text="Jeudi" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <Label text="Vendredi" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+            <!-- Horaires -->
+            <Label text="8:00" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="8:30" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label text="9:00" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Label text="9:30" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <Label text="10:00" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Label text="10:30" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <Label text="11:00" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+            <Label text="11:30" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+            <Label text="12:00" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+            <Label text="12:30" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+            <Label text="13:00" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+            <Label text="13:30" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+            <Label text="14:00" GridPane.columnIndex="0" GridPane.rowIndex="15" />
+            <Label text="14:30" GridPane.columnIndex="0" GridPane.rowIndex="16" />
+            <Label text="15:00" GridPane.columnIndex="0" GridPane.rowIndex="17" />
+            <Label text="15:30" GridPane.columnIndex="0" GridPane.rowIndex="18" />
+            <Label text="16:00" GridPane.columnIndex="0" GridPane.rowIndex="19" />
+            <Label text="16:30" GridPane.columnIndex="0" GridPane.rowIndex="20" />
+            <Label text="17:00" GridPane.columnIndex="0" GridPane.rowIndex="21" />
+            <Label text="17:30" GridPane.columnIndex="0" GridPane.rowIndex="22" />
+            <Label text="18:00" GridPane.columnIndex="0" GridPane.rowIndex="23" />
+            <Label text="18:30" GridPane.columnIndex="0" GridPane.rowIndex="24" />
+            <Label text="19:00" GridPane.columnIndex="0" GridPane.rowIndex="25" />
+            <Label text="19:30" GridPane.columnIndex="0" GridPane.rowIndex="26" />
+            <!-- Lundi -->
+            <!-- Ajoutez ici les cellules pour les événements du lundi -->
+            <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Pane prefHeight="5.0" prefWidth="5.0" style="-fx-background-color:red;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </center>
 </BorderPane>

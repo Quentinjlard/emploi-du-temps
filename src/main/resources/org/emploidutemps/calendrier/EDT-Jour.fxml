@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml/1"  prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../../Style/acceuil.css"
+            xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.emploidutemps.calendrier.CalendrierJourController">
+    <top>
+        <MenuBar styleClass="menu-item" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Mon EDT">
+                    <items>
+                        <MenuItem onAction="#JourEDT" mnemonicParsing="false" text="Jour" />
+                        <MenuItem onAction="#SeamineEDT" mnemonicParsing="false" text="Semaine" />
+                        <MenuItem onAction="#MoisEDT" mnemonicParsing="false" text="Mois" />
+                    </items>
+                </Menu>
+                <Menu onAction="#FormationEDT" mnemonicParsing="false" text="Formation" />
+                <Menu onAction="#EnseignementEDT" mnemonicParsing="false" text="Enseignement" />
+                <Menu onAction="#SalleEDT" mnemonicParsing="false" text="Salle" />
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;">
+        </AnchorPane>
+    </center>
+</BorderPane>
