@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox id="root" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@../../../Style/acceuil.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emploidutemps.calendrier.AccueilController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  stylesheets="@../../../Style/acceuil.css"
+            xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.emploidutemps.calendrier.AccueilController">
+   <top>
+      <MenuBar styleClass="menu-item" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Mon EDT">
+               <items>
+                  <MenuItem onAction="#JourEDT" mnemonicParsing="false" text="Jour" />
+                  <MenuItem onAction="#SeamineEDT" mnemonicParsing="false" text="Semaine" />
+                  <MenuItem onAction="#MoisEDT" mnemonicParsing="false" text="Mois" />
+               </items>
+            </Menu>
+            <Menu onAction="#FormationEDT" mnemonicParsing="false" text="Formation" />
+            <Menu onAction="#EnseignementEDT" mnemonicParsing="false" text="Enseignement" />
+            <Menu onAction="#SalleEDT" mnemonicParsing="false" text="Salle" />
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Bienvenue sur notre plateforme">
+               <font>
+                  <Font size="24.0" />
+               </font></Text>
+            <Label text="Connectez-vous pour accéder à votre espace personnel et découvrir nos services." textAlignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#ConnextionAction" prefHeight="47.0" prefWidth="300.0" text="Connecter">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Label text="Si vous avez des questions ou besoin d'aide, n'hésitez pas à contacter notre support." textAlignment="CENTER" />
+         </children>
+      </VBox>
+   </center>
 
-<Label id="welcome-label" styleClass="welcome-label" text="Bienvenue" />
-
-<Label id="subtitle" styleClass="subtitle" text="Nom et Prénom" />
-
-<Label id="subtitle" styleClass="subtitle" text="Que souhaitez-vous consulter ?" />
-
-<HBox spacing="10">
-   <Button id="info-btn" onAction="#onEmploiTempsClicked" styleClass="info-btn" text="Mon emploi du Temps" />
-   <Button id="info-btn" onAction="#onFormationClicked" styleClass="info-btn" text="Formation" />
-   <Button id="info-btn" onAction="#onEnseignantClicked" styleClass="info-btn" text="Enseignant" />
-   <Button id="info-btn" onAction="#onEnseignementClicked" styleClass="info-btn" text="Enseignement" />
-   <Button id="info-btn" onAction="#onSalleClicked" styleClass="info-btn" text="Salle" />
-</HBox>
-
-</VBox>
+</BorderPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+    <BorderPane xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml"
+    fx:controller="org.emploidutemps.calendrier.AccueilController"
+    prefHeight="400.0" prefWidth="600.0" >
+        <top>
+            <HBox spacing="10" style="-fx-background-color: #336699;" padding="15, 12, 15, 12">
+                <Button text="EDT Jour" />
+                <Button text="EDT Semaine" />
+                <Button text="EDT Mois" />
+                <Button text="Formation" />
+                <Button text="Enseignant" />
+                <Button text="Enseignement" />
+                <Button text="Salle" />
+            </HBox>
+        </top>
+        <center>
+            <VBox alignment="CENTER" spacing="20">
+
+                <Label text="Connectez-vous pour accéder à votre espace personnel et découvrir nos services." />
+                <Button text="Connecter" />
+                <Label text="Si vous avez des questions ou besoin d'aide, n'hésitez pas à contacter notre support." />
+            </VBox>
+        </center>
+    </BorderPane>
+
