@@ -6,7 +6,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../../Style/acceuil.css"
             xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.emploidutemps.calendrier.CalendrierJourController">
+            fx:controller="org.emploidutemps.calendrier.ReservationSalle">
     <top>
         <MenuBar styleClass="menu-item" BorderPane.alignment="CENTER">
             <menus>
@@ -29,7 +29,37 @@
         </MenuBar>
     </top>
     <center>
-        <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;">
-        </AnchorPane>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Réservation de salle" styleClass="header-label" />
+
+            <!-- Label and TextField for Nom -->
+            <HBox alignment="CENTER">
+                <Label text="Nom:" />
+                <TextField promptText="Entrez votre nom" />
+            </HBox>
+
+            <!-- Label and TextField for Date -->
+            <HBox alignment="CENTER">
+                <Label text="Date:" />
+                <TextField promptText="Entrez la date" />
+            </HBox>
+
+            <!-- Label and TextField for Heure de début -->
+            <HBox alignment="CENTER">
+                <Label text="Heure de début:" />
+                <TextField promptText="Entrez l'heure de début" />
+            </HBox>
+
+            <!-- Label and TextField for Heure de fin -->
+            <HBox alignment="CENTER">
+                <Label text="Heure de fin:" />
+                <TextField promptText="Entrez l'heure de fin" />
+            </HBox>
+
+            <!-- Add more fields as needed (e.g., salle number, purpose, etc.) -->
+
+            <!-- Stylish registration button -->
+            <Button text="Enregistrer" styleClass="registration-button" onAction="#handleReservation" />
+        </VBox>
     </center>
 </BorderPane>

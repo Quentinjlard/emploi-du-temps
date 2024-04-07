@@ -20,7 +20,12 @@
                 </Menu>
                 <Menu onAction="#FormationEDT" mnemonicParsing="false" text="Formation" />
                 <Menu onAction="#EnseignementEDT" mnemonicParsing="false" text="Enseignement" />
-                <Menu onAction="#SalleEDT" mnemonicParsing="false" text="Salle" />
+                <Menu mnemonicParsing="false" text="Salle">
+                    <items>
+                        <MenuItem onAction="#SalleEDT" mnemonicParsing="false" text="Salle" />
+                        <MenuItem onAction="#Rerservation" mnemonicParsing="false" text="Reserver" />
+                    </items>
+                </Menu>
             </menus>
         </MenuBar>
     </top>
