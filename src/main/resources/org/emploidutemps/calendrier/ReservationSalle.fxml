@@ -13,7 +13,7 @@
                 <Menu mnemonicParsing="false" text="Mon EDT">
                     <items>
                         <MenuItem onAction="#JourEDT" mnemonicParsing="false" text="Jour" />
-                        <MenuItem onAction="#SeamineEDT" mnemonicParsing="false" text="Semaine" />
+                        <MenuItem onAction="#SemaineEDT" mnemonicParsing="false" text="Semaine" />
                         <MenuItem onAction="#MoisEDT" mnemonicParsing="false" text="Mois" />
                     </items>
                 </Menu>

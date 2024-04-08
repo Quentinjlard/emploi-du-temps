@@ -11,9 +11,8 @@ module org.example.emploidutemps {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires json.simple;
 
     opens org.emploidutemps.calendrier to javafx.fxml;
     exports org.emploidutemps.calendrier;
-
-
 }

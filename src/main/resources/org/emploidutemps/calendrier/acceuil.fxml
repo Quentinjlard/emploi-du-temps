@@ -4,25 +4,23 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  stylesheets="@../../../Style/acceuil.css"
-            xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.emploidutemps.calendrier.AccueilController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@../../../Style/acceuil.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emploidutemps.calendrier.AccueilController">
    <top>
-      <MenuBar styleClass="menu-item" BorderPane.alignment="CENTER">
+      <MenuBar prefHeight="39.0" prefWidth="800.0" styleClass="menu-item" BorderPane.alignment="CENTER">
          <menus>
             <Menu mnemonicParsing="false" text="Mon EDT">
                <items>
-                  <MenuItem onAction="#JourEDT" mnemonicParsing="false" text="Jour" />
-                  <MenuItem onAction="#SeamineEDT" mnemonicParsing="false" text="Semaine" />
-                  <MenuItem onAction="#MoisEDT" mnemonicParsing="false" text="Mois" />
+                  <MenuItem mnemonicParsing="false" onAction="#JourEDT" text="Jour" />
+                  <MenuItem mnemonicParsing="false" onAction="#SemaineEDT" text="Semaine" />
+                  <MenuItem mnemonicParsing="false" onAction="#MoisEDT" text="Mois" />
                </items>
             </Menu>
-            <Menu onAction="#FormationEDT" mnemonicParsing="false" text="Formation" />
-            <Menu onAction="#EnseignementEDT" mnemonicParsing="false" text="Enseignement" />
+            <Menu mnemonicParsing="false" onAction="#FormationEDT" text="Formation" />
+            <Menu mnemonicParsing="false" onAction="#EnseignementEDT" text="Enseignement" />
             <Menu mnemonicParsing="false" text="Salle">
                <items>
-                  <MenuItem onAction="#SalleEDT" mnemonicParsing="false" text="Salle" />
-                  <MenuItem onAction="#Rerservation" mnemonicParsing="false" text="Reserver" />
+                  <MenuItem mnemonicParsing="false" onAction="#SalleEDT" text="Salle" />
+                  <MenuItem mnemonicParsing="false" onAction="#Rerservation" text="Reserver" />
                </items>
             </Menu>
          </menus>

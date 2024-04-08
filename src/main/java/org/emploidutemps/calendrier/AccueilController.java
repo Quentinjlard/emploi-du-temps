@@ -30,119 +30,100 @@ public class AccueilController {
     }
 
     public void JourEDT(ActionEvent event) throws IOException {
-        String FXML = "EDT-Jour.fxml";
-        Parent root = FXMLLoader.load(getClass().getResource(FXML));
 
-        Scene scene = new Scene(root, 800, 600);
-
-        MenuItem menuItem = (MenuItem) event.getSource();
-        ContextMenu menu = menuItem.getParentPopup();
-        Node node = menu.getOwnerNode();
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setTitle(FXML);
-        stage.setScene(scene);
-        stage.show();
     }
 
 
-    public void SeamineEDT(ActionEvent event) throws IOException {
+    public void SemaineEDT(ActionEvent event) throws IOException {
+        if (SessionManager.getInstance().isUtilisateurConnecte()) {
+            Parent root = FXMLLoader.load(getClass().getResource("EDT-Semaine.fxml"));
 
-        String FXML = "EDT-Semaine.fxml";
-        Parent root = FXMLLoader.load(getClass().getResource(FXML));
+            Scene scene = new Scene(root, 1000, 810);
 
-        Scene scene = new Scene(root, 800, 600);
+            MenuItem menuItem = (MenuItem) event.getSource();
+            ContextMenu menu = menuItem.getParentPopup();
+            Node node = menu.getOwnerNode();
+            Stage stage = (Stage) node.getScene().getWindow();
 
-        MenuItem menuItem = (MenuItem) event.getSource();
-        ContextMenu menu = menuItem.getParentPopup();
-        Node node = menu.getOwnerNode();
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setTitle(FXML);
-        stage.setScene(scene);
-        stage.show();
-
+            stage.setTitle("EDT-Semaine.fxml");
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     public void MoisEDT(ActionEvent event) throws IOException{
 
-        String FXML = "EDT-Mois.fxml";
-        Parent root = FXMLLoader.load(getClass().getResource(FXML));
-
-        Scene scene = new Scene(root, 800, 600);
-
-        MenuItem menuItem = (MenuItem) event.getSource();
-        ContextMenu menu = menuItem.getParentPopup();
-        Node node = menu.getOwnerNode();
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setTitle(FXML);
-        stage.setScene(scene);
-        stage.show();
-
     }
 
     public void FormationEDT(ActionEvent event) throws IOException {
-        String FXML = "EDT-Semaine.fxml";
-        Parent root = FXMLLoader.load(getClass().getResource(FXML));
+        if (SessionManager.getInstance().isUtilisateurConnecte()) {
+            String FXML = "EDT-Semaine.fxml";
+            Parent root = FXMLLoader.load(getClass().getResource(FXML));
 
-        Scene scene = new Scene(root, 800, 600);
+            Scene scene = new Scene(root, 1000, 810);
 
-        MenuItem menuItem = (MenuItem) event.getSource();
-        ContextMenu menu = menuItem.getParentPopup();
-        Node node = menu.getOwnerNode();
-        Stage stage = (Stage) node.getScene().getWindow();
+            MenuItem menuItem = (MenuItem) event.getSource();
+            ContextMenu menu = menuItem.getParentPopup();
+            Node node = menu.getOwnerNode();
+            Stage stage = (Stage) node.getScene().getWindow();
 
-        stage.setTitle(FXML);
-        stage.setScene(scene);
-        stage.show();
+            stage.setTitle(FXML);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     public void EnseignementEDT(ActionEvent event) throws IOException {
-        String FXML = "EDT-Semaine.fxml";
-        Parent root = FXMLLoader.load(getClass().getResource(FXML));
+        if (SessionManager.getInstance().isUtilisateurConnecte()) {
+            String FXML = "EDT-Semaine.fxml";
+            Parent root = FXMLLoader.load(getClass().getResource(FXML));
 
-        Scene scene = new Scene(root, 800, 600);
+            Scene scene = new Scene(root, 1000, 810);
 
-        MenuItem menuItem = (MenuItem) event.getSource();
-        ContextMenu menu = menuItem.getParentPopup();
-        Node node = menu.getOwnerNode();
-        Stage stage = (Stage) node.getScene().getWindow();
+            MenuItem menuItem = (MenuItem) event.getSource();
+            ContextMenu menu = menuItem.getParentPopup();
+            Node node = menu.getOwnerNode();
+            Stage stage = (Stage) node.getScene().getWindow();
 
-        stage.setTitle(FXML);
-        stage.setScene(scene);
-        stage.show();
+            stage.setTitle(FXML);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     public void SalleEDT(ActionEvent event) throws IOException {
-        String FXML = "EDT-Semaine.fxml";
-        Parent root = FXMLLoader.load(getClass().getResource(FXML));
+        if (SessionManager.getInstance().isUtilisateurConnecte()) {
+            String FXML = "EDT-Semaine.fxml";
+            Parent root = FXMLLoader.load(getClass().getResource(FXML));
 
-        Scene scene = new Scene(root, 800, 600);
+            Scene scene = new Scene(root, 1000, 810);
 
-        MenuItem menuItem = (MenuItem) event.getSource();
-        ContextMenu menu = menuItem.getParentPopup();
-        Node node = menu.getOwnerNode();
-        Stage stage = (Stage) node.getScene().getWindow();
+            MenuItem menuItem = (MenuItem) event.getSource();
+            ContextMenu menu = menuItem.getParentPopup();
+            Node node = menu.getOwnerNode();
+            Stage stage = (Stage) node.getScene().getWindow();
 
-        stage.setTitle(FXML);
-        stage.setScene(scene);
-        stage.show();
+            stage.setTitle(FXML);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     public void Rerservation(ActionEvent event) throws IOException {
-        String FXML = "ReservationSalle.fxml";
-        Parent root = FXMLLoader.load(getClass().getResource(FXML));
+        if (SessionManager.getInstance().isUtilisateurConnecte() && SessionManager.getInstance().isProfesseur()) {
+            String FXML = "ReservationSalle.fxml";
+            Parent root = FXMLLoader.load(getClass().getResource(FXML));
 
-        Scene scene = new Scene(root, 800, 600);
+            Scene scene = new Scene(root, 1000, 810);
 
-        MenuItem menuItem = (MenuItem) event.getSource();
-        ContextMenu menu = menuItem.getParentPopup();
-        Node node = menu.getOwnerNode();
-        Stage stage = (Stage) node.getScene().getWindow();
+            MenuItem menuItem = (MenuItem) event.getSource();
+            ContextMenu menu = menuItem.getParentPopup();
+            Node node = menu.getOwnerNode();
+            Stage stage = (Stage) node.getScene().getWindow();
 
-        stage.setTitle(FXML);
-        stage.setScene(scene);
-        stage.show();
+            stage.setTitle(FXML);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 }

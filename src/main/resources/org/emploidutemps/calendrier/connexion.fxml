@@ -15,8 +15,8 @@
       </image>
    </ImageView>
    <Label id="Connexion" layoutX="136.0" layoutY="129.0" prefHeight="60" prefWidth="200" styleClass="Connexion" stylesheets="@../../../Style/connexion.css" text="Connexion" textFill="#FF8D4E" />
-   <Rectangle id="key-solid1" fill="#FF8D4E" height="25" layoutX="84.0" layoutY="200.0" width="25" />
-   <Rectangle id="user-solid1" fill="#FF8D4E" height="28.57" layoutX="84.0" layoutY="302.0" width="25" />
+   <Rectangle id="key-solid1" fill="#FF8D4E" height="25" layoutX="84.0" layoutY="200.0" width="66.0" />
+   <Rectangle id="user-solid1" fill="#FF8D4E" height="29.0" layoutX="84.0" layoutY="302.0" width="86.0" />
    <Label id="MotDePasse" layoutX="93.0" layoutY="308.0" prefHeight="10" prefWidth="86" style="-fx-font-family: 'Inter'; -fx-font-size: 11; -fx-text-alignment: center;" text="Mot de passe" textFill="WHITE" />
    <Label id="Utilisateur" layoutX="93.0" layoutY="205.0" prefHeight="10" prefWidth="86" style="-fx-font-family: 'Inter'; -fx-font-size: 11; -fx-text-alignment: center;" text="Utilisateur" textFill="WHITE" />
    <TextField fx:id="TextFiledLogin" layoutX="81.0" layoutY="239.0" prefHeight="25.0" prefWidth="323.0" promptText="Utilisateur" styleClass="Rectangle5" stylesheets="@../../../Style/connexion.css" />

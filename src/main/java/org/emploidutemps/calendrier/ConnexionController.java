@@ -24,16 +24,17 @@ public class ConnexionController {
     @FXML
     protected void onConnexionButtonClick(ActionEvent event) throws IOException {
 
-        boolean authentification = AuthentificationManager.authentifierUtilisateur(TextFiledLogin.getText(),
-                                                                                    TextFiledPassword.getText());
+        boolean authentification = AuthentificationManager.authentifierUtilisateur(TextFiledLogin.getText(), TextFiledPassword.getText());
 
         if ( authentification ) {
             connexionText.setText("Authentification réussie.");
             System.out.println("Authentification réussie.");
 
+            SessionManager.getInstance().setUtilisateurConnecte(true);
+
             Parent root = FXMLLoader.load(getClass().getResource("acceuil.fxml"));
 
-            Scene scene = new Scene(root, 800, 600);
+            Scene scene = new Scene(root, 1000, 800);
 
             Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
             stage.setTitle("Acceuil");
@@ -50,7 +51,7 @@ public class ConnexionController {
 
         Parent root = FXMLLoader.load(getClass().getResource("acceuil.fxml"));
 
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 1000, 800);
 
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         stage.setTitle("Acceuil");

@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CalendrierSemaineController {
+public class CalendrierController {
     public void SemainePrecedante(ActionEvent event) {
     }
 
@@ -28,12 +28,13 @@ public class CalendrierSemaineController {
         String FXML = "EDT-Jour.fxml";
         Parent root = FXMLLoader.load(getClass().getResource(FXML));
 
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 1000, 800);
 
         MenuItem menuItem = (MenuItem) event.getSource();
         ContextMenu menu = menuItem.getParentPopup();
         Node node = menu.getOwnerNode();
         Stage stage = (Stage) node.getScene().getWindow();
+        stage.setResizable(false);
 
         stage.setTitle(FXML);
         stage.setScene(scene);
@@ -46,7 +47,7 @@ public class CalendrierSemaineController {
         String FXML = "EDT-Semaine.fxml";
         Parent root = FXMLLoader.load(getClass().getResource(FXML));
 
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 1000, 800);
 
         MenuItem menuItem = (MenuItem) event.getSource();
         ContextMenu menu = menuItem.getParentPopup();

@@ -29,7 +29,7 @@ public class ReservationSalle {
     }
 
 
-    public void SeamineEDT(ActionEvent event) throws IOException {
+    public void SemaineEDT(ActionEvent event) throws IOException {
 
         String FXML = "EDT-Semaine.fxml";
         Parent root = FXMLLoader.load(getClass().getResource(FXML));
