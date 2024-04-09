@@ -12,6 +12,17 @@
     -fx-alignment: center; /* Centrage vertical et horizontal */
 }
 
+.date-label {
+    -fx-font-family: 'Arial', sans-serif; /* Police pour les labels personnalisés */
+	-fx-background-color: #5d5555;
+    -fx-text-fill: #f1c40f; /* Jaune complémentaire */
+    -fx-text-alignment: left;
+    -fx-font-size: 13px; /* Taille de la police */
+    -fx-alignment: center; /* Centrage vertical et horizontal */
+	-fx-border-color: black;
+	-fx-border-width: 1 1 1 1;
+}
+
 .text {
     -fx-font-family: 'Times New Roman', serif; /* Police pour le texte */
     -fx-text-alignment: center;
@@ -31,7 +42,6 @@
 .menu-bar {
     -fx-font-family: 'Segoe UI', sans-serif; /* Police pour la barre de menu */
     -fx-background-color: #2c3e50; /* Bleu plus saturé */
-    -fx-pref-width: 100%;
     -fx-alignment: center; /* Centrage vertical et horizontal */
 }
 
@@ -45,4 +55,9 @@
 .menu-item:hover {
     /* -fx-background-color: #f39c12;  Couleur de fond pour l'effet de survol */
     -fx-text-fill: white; /* Couleur de texte pour l'effet de survol */
+}
+
+.button-special:hover {
+    /* -fx-background-color: #f39c12;  Couleur de fond pour l'effet de survol */
+    -fx-background-color: white; /* Couleur de texte pour l'effet de survol */
 }

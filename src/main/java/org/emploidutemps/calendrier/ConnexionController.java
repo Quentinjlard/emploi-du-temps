@@ -6,7 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -30,17 +32,22 @@ public class ConnexionController {
             connexionText.setText("Authentification réussie.");
             System.out.println("Authentification réussie.");
 
-            SessionManager.getInstance().setUtilisateurConnecte(true);
-
-            Parent root = FXMLLoader.load(getClass().getResource("acceuil.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("accueil_connected.fxml"));
 
             Scene scene = new Scene(root, 1000, 800);
 
             Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+
+            Label welcome = (Label) scene.lookup("#welcome");
+            if(SessionManager.getInstance().isProfesseur()) {
+                welcome.setText("Bienvenue professeur " + SessionManager.getInstance().getNom() + "\n\nVotre promotion est: " + SessionManager.getInstance().getPromotion());
+            } else {
+                welcome.setText("Bienvenue élève " + SessionManager.getInstance().getNom() + "\n\nVotre promotion est: " + SessionManager.getInstance().getPromotion());
+            }
+
             stage.setTitle("Acceuil");
             stage.setScene(scene);
             stage.show();
-
         } else {
             connexionText.setText("Nom d'utilisateur ou mot de passe incorrect.");
             System.out.println("Nom d'utilisateur ou mot de passe incorrect.");

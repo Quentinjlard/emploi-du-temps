@@ -51,7 +51,7 @@ public class Parser {
                             else if(tmp[0].contains("Salle")) cour.put("Salle", tmp[1]);
                             else if(tmp[0].contains("Type")) cour.put("Type", tmp[1]);
                             else if(tmp[0].contains("TD")) cour.put("TD", tmp[1]);
-                            else if(tmp[0].contains("M émo")) cour.put("Memo", tmp[1]);
+                            else if(tmp[0].contains("Mémo")) cour.put("Memo", tmp[1]);
                         }
                     } else {
                         if(tmp[0].equals("Matière")) cour.put("Matiere", tmp[1]);
@@ -60,7 +60,7 @@ public class Parser {
                         else if(tmp[0].contains("Salle")) cour.put("Salle", tmp[1]);
                         else if(tmp[0].contains("Type")) cour.put("Type", tmp[1]);
                         else if(tmp[0].contains("TD")) cour.put("TD", tmp[1]);
-                        else if(tmp[0].contains("M émo")) cour.put("Memo", tmp[1]);
+                        else if(tmp[0].contains("Mémo")) cour.put("Memo", tmp[1]);
                     }
                 }
             }
@@ -71,7 +71,7 @@ public class Parser {
 
     public static void main(String[] args) throws IOException {
 
-        JSONArray test = Parse(System.getProperty("user.dir")+"/EDT/Enseignant/EDT-Cecillon-Noe.txt");
+        JSONArray test = Parse(System.getProperty("user.dir")+"/EDT/EDT-Cecillon-Noe.txt");
         for (int i = 0; i < test.size(); i++) {
             JSONObject jsonObject = (JSONObject) test.get(i);
             for (Object key : jsonObject.keySet()) {
@@ -79,7 +79,7 @@ public class Parser {
                 Object value = jsonObject.get(keyStr);
                 System.out.println(keyStr + " " + value);
             }
-            break;
+            System.out.println("");
             //System.out.println(jsonObject.get("DTSTART"));
         }
     }

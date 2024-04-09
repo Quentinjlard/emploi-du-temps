@@ -33,7 +33,15 @@ public class AuthentificationManager {
                     preparedStatement.setString(2, motDePasse);
 
                     try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                        return resultSet.next(); // true si l'utilisateur existe, false sinon
+                        if(resultSet.next()) {
+                            boolean prof = resultSet.getBoolean("Professeur");
+                            String promotion = resultSet.getString("Promotion");
+                            String nom = resultSet.getString("Nom");
+                            SessionManager.getInstance().setUtilisateurConnecte(true, prof, promotion, nom);
+                            return true;
+                        } else {
+                            return false;
+                        }
                     }
                 }
             }
